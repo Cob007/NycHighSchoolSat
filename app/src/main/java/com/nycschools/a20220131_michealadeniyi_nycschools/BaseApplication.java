@@ -32,7 +32,7 @@ public class BaseApplication extends Application {
     }
 
     public boolean isNetworkAvailable(Context context) {
-        if(context == null)  return false;
+        if (context == null) return false;
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivityManager != null) {
             if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -45,10 +45,7 @@ public class BaseApplication extends Application {
                         return true;
                     }
                 }
-            }
-
-            else {
-
+            } else {
                 try {
                     NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
                     if (activeNetworkInfo != null && activeNetworkInfo.isConnected()) {
@@ -60,7 +57,7 @@ public class BaseApplication extends Application {
                 }
             }
         }
-        Log.i(TAG,"Network is available : FALSE ");
+        Log.i(TAG, "Network is available : FALSE ");
         return false;
     }
 

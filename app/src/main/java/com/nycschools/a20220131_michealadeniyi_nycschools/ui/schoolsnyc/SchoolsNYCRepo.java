@@ -37,7 +37,7 @@ public class SchoolsNYCRepo {
                 if (response.isSuccessful() && response.body()!=null ) {
                     Log.e(TAG, "response.size="+response.body().size());
                     mutableLiveData.postValue(new ApiResponse<>(response.body()));
-                }else{
+                } else {
                     mutableLiveData.postValue(new ApiResponse<>(new Throwable(response.message())));
                 }
             }

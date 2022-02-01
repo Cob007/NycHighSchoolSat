@@ -90,7 +90,7 @@ public class SchoolSatActivity extends AppCompatActivity {
                         Toast.makeText(SchoolSatActivity.this, "There is not response for this school ", Toast.LENGTH_SHORT).show();
 
                     }
-                } else{
+                } else {
                     Throwable e = v.getError();
                     binding.llNonEmpty.setVisibility(View.GONE);
                     binding.llEmpty.setVisibility(View.VISIBLE);
@@ -99,7 +99,7 @@ public class SchoolSatActivity extends AppCompatActivity {
                     Log.e(TAG, "Error is " + e.getLocalizedMessage());
                 }
             });
-        } else{
+        } else {
             Snackbar snackbar = Snackbar
                     .make(binding.layout, "No Internet Connection ", Snackbar.LENGTH_LONG)
                     .setAction("RETRY", view -> {

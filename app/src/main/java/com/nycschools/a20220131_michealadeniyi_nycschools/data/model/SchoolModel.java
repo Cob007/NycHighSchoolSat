@@ -8,21 +8,27 @@ public class SchoolModel {
     @Expose
     @SerializedName("dbn")
     private String dbn;
+
     @Expose
     @SerializedName("school_name")
     private String schoolName;
+
     @Expose
     @SerializedName("overview_paragraph")
     private String overviewParagraph;
+
     @Expose
     @SerializedName("website")
     private String website;
+
     @Expose
     @SerializedName("primary_address_line_1")
     private String address;
+
     @Expose
     @SerializedName("city")
     private String city;
+
     @Expose
     @SerializedName("phone_number")
     private String phoneNumber;
